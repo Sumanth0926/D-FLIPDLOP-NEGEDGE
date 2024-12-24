@@ -38,7 +38,13 @@ Next state of D flip-flop is always equal to data input, D for every positive tr
 **RTL LOGIC FOR FLIPFLOPS**
 
 
+![Screenshot 2024-12-24 183037](https://github.com/user-attachments/assets/ac1e7452-6064-407a-bd73-f4e3004f0c8f)
+
+
 **TIMING DIGRAMS FOR FLIP FLOPS**
 
+![Screenshot 2024-12-24 183043](https://github.com/user-attachments/assets/da0d8d71-fbeb-4e92-a450-73f4f2046b2a)
 
 **RESULTS**
+Thus the program to implement D flipflop using verilog and validating their
+ functionality using their functional tables has been successfully verified
