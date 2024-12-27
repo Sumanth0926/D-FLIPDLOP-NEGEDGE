@@ -9,7 +9,8 @@ To implement  D flipflop using verilog and validating their functionality using 
 Quartus prime
 
 **THEORY**
-  module d_ff_neg_edge (d, clk, rst, q);
+
+     module d_ff_neg_edge (d, clk, rst, q);
       input d, clk, rst;
       output reg q;
     
