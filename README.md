@@ -9,18 +9,6 @@ To implement  D flipflop using verilog and validating their functionality using 
 Quartus prime
 
 **THEORY**
-
-     module d_ff_neg_edge (d, clk, rst, q);
-      input d, clk, rst;
-      output reg q;
-    
-      always @(negedge clk or posedge rst) begin
-        if (rst)
-          q <= 0; // Reset the flip-flop
-        else
-          q <= d; // D input is passed to Q on the negative clock edge
-      end
-     endmodule
     
 **D Flip-Flop**
 
@@ -40,11 +28,29 @@ Next state of D flip-flop is always equal to data input, D for every positive tr
 
 **Procedure**
 
-/* write all the steps invloved */
+1.Define Inputs/Outputs: Inputs: D (data), c1k (clock); Outputs: Q, Qbar (~Q).
+  
+  2.Initialization: Set Q = 0 and Qbar = 1 at the start of the simulation.
+  
+  3.D Flip-Flop Logic: On the positive edge of c1k, assign Q = D.
+  
+  4.Complementary Output: Update Qbar = ~D to maintain complementarity.
+  
+  5.Testbench: Test with various D and c1k values to verify data storage
 
 **PROGRAM**
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. 
+     module d_ff_neg_edge (d, clk, rst, q);
+           input d, clk, rst;
+           output reg q;
+         
+           always @(negedge clk or posedge rst) begin
+             if (rst)
+               q <= 0; // Reset the flip-flop
+             else
+               q <= d; // D input is passed to Q on the negative clock edge
+           end
+          endmodule
 Developed by: pothu sumanth
 RegisterNumber: 24000831
 */
